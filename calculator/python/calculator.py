@@ -58,5 +58,7 @@ for row_vals in buttons:
                         relief="flat")
         btn.pack(side=tk.LEFT, expand=True, fill="both", padx=5, pady=5)
         btn.bind("<Button-1>", on_click)
+        btn.bind("<Enter>", lambda e: e.widget.config(bg=btn_active))
+        btn.bind("<Leave>", lambda e: e.widget.config(bg=btn_color))
 
 root.mainloop()
